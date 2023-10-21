@@ -3,6 +3,8 @@ import Mainlayout from "./layouts/mainlayout";
 import Kanye from "./pages/kanye";
 import TheMealBd from "./layouts/TheMealBd";
 import Home from "./pages/themealdb/Home";
+import Meal from "./pages/themealdb/Meal";
+import Search from "./pages/themealdb/Search";
 
 
 const App = () => {
@@ -28,8 +30,12 @@ const App = () => {
           element: <Home/>
         },
         {
-          path: 'meal',
-          element: <h1>The meal pages</h1>
+          path: 'meal/:cate_name',
+          element: <Meal/>
+        },
+        {
+          path: 'search',
+          element: <Search/>
         }
       ]
     }

@@ -32,7 +32,7 @@ const Home = () => {
                             ? <p>Loading...</p>
                             : data.map(dataObj => {
                                 return (
-                                    <div key={dataObj.idCategory} onClick={() => navigate('meal')}>
+                                    <div key={dataObj.idCategory} onClick={() => navigate(`meal/${dataObj.strCategory}`)}>
                                         <img src={dataObj.strCategoryThumb}/>
                                         <p className='text-center'>{dataObj.strCategory}</p>
                                     </div>
